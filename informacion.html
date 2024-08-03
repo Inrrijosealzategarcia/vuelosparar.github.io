@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información al Cliente</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('playa.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            position: relative;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            z-index: 2; /* Asegura que la barra de navegación esté sobre el video */
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+        }
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .section {
+            padding: 60px 20px;
+            margin: 20px;
+            border-radius: 10px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            z-index: 1; /* Asegura que el contenido de la sección esté sobre el video */
+        }
+        .section.visible {
+            opacity: 1;
+        }
+        .section h2 {
+            margin-top: 0;
+            color: #007BFF;
+        }
+        .info-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .info-box {
+            color: black;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            max-width: 600px;
+            text-align: left;
+            background: rgba(255, 255, 255, 0.7); /* Fondo semitransparente */
+        }
+        .info-box h3 {
+            margin-top: 0;
+            color: #007BFF;
+        }
+        .info-box p {
+            margin: 10px 0;
+        }
+        .info-box ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        .info-box a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        .info-box a:hover {
+            text-decoration: underline;
+        }
+        .video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 30vh; /* Ajusta la altura del contenedor del video */
+        }
+        .video-container video {
+            width: 100%; /* Ajusta el ancho del video */
+            height: auto; /* Mantiene la relación de aspecto del video */
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            setTimeout(function() {
+                document.querySelector('.section').classList.add('visible');
+            }, 6000);
+        };
+    </script>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html#inicio">Inicio</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="informacion.html">Información al Cliente</a>
+        <a href="precios.html">Precio de Vuelos</a>
+    </div>
+
+    <div class="section">
+        <h2>Información al Cliente</h2>
+        <div class="info-container">
+            <div class="info-box">
+                <h3>Horario de Atención</h3>
+                <p>Nuestros horarios de atención son:</p>
+                <ul>
+                    <li>Lunes a Viernes: 8:00 AM - 6:00 PM</li>
+                    <li>Sábados: 9:00 AM - 1:00 PM</li>
+                    <li>Domingos y Festivos: Cerrado</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h3>Políticas de Cancelación</h3>
+                <p>Entendemos que los planes pueden cambiar. Por eso, ofrecemos políticas de cancelación flexibles:</p>
+                <ul>
+                    <li>Cancelaciones realizadas con más de 24 horas de antelación: Sin costo.</li>
+                    <li>Cancelaciones realizadas con menos de 24 horas de antelación: Se cobrará un 50% del total del vuelo.</li>
+                    <li>No presentarse al vuelo: No se realizará reembolso.</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h3>Equipaje</h3>
+                <p>Política de equipaje para nuestros vuelos:</p>
+                <ul>
+                    <li>Equipaje de mano: 1 pieza de hasta 10 kg.</li>
+                    <li>Equipaje facturado: Hasta 23 kg.</li>
+                    <li>Exceso de equipaje: Se aplicarán tarifas adicionales.</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h3>Servicios a Bordo</h3>
+                <p>Ofrecemos una variedad de servicios a bordo para tu comodidad:</p>
+                <ul>
+                    <li>Snacks y bebidas gratuitos.</li>
+                    <li>Entretenimiento a bordo con pantallas individuales.</li>
+                    <li>Wi-Fi disponible en vuelos seleccionados.</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h3>Preguntas Frecuentes</h3>
+                <p>Visita nuestra sección de preguntas frecuentes para obtener respuestas rápidas a las dudas más comunes:</p>
+                <ul>
+                    <li><a href="faq.html">¿Cómo puedo modificar mi reserva?</a></li>
+                    <li><a href="faq.html">¿Qué documentos necesito para viajar?</a></li>
+                    <li><a href="faq.html">¿Cómo puedo reclamar mi equipaje perdido?</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <video src="san.andres.mp4" autoplay muted loop controls></video>
+    </div>
+ <link rel="stylesheet" href="estilos1.css">
+   <link rel="stylesheet" href="estilos1.css">
+</body>
+</html>
+
